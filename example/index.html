@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ryac BasicSlider</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		<!-- this is the basic structure.. -->
+		<div id="screens" class="screens">
+			<div class="screen s0">screen 1</div>
+			<div class="screen s1"><img src="http://placekitten.com/400/300"></div>
+			<div class="screen s2">screen 3</div>
+		</div>
+
+		<script src="../libs/jquery/jquery.js"></script>
+		<script src="../src/ryac-basic-slider.js"></script>
+
+		<script>
+			$(function() {
+
+				var slider = $('#screens').slider({
+					element: 'div', // each screen in this example is defined by a div tag, the element can be anything..
+					width: 400,
+					onSlideStart: onSlideStart
+				});
+
+				// public methods available..
+				// 
+				// slider.gotoSlide(3);
+				// 
+				// events..
+				// 
+				// onSlideStart: executes at the start of the animation..
+
+				function onSlideStart (e) {
+					console.log('onSlideStart:', e);
+				}
+
+			});
+		</script>
+
+	</body>
+</html>

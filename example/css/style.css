@@ -1,0 +1,32 @@
+/* -- required -- */
+.screens {
+	position: absolute;
+	width: 400px;
+	height: 300px;
+	overflow: hidden;
+}
+
+/* -- not required -- */
+
+body {
+	margin: 0px;
+	padding: 0;
+	background: #ccc;
+}
+
+.screen {
+	width: 400px;
+	height: 300px;
+}
+
+.s0 {
+	background: #9900ff;
+}
+
+.s1 {
+	background: #0099ff;
+}
+.s2 {
+	background: #0000ff;
+}
+
