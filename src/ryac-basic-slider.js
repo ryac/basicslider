@@ -118,7 +118,7 @@
 				self.init();
 			}
 			else {
-				// log('Slider init..');
+				log('Slider init..');
 				self = $.data(this, 'slider', new $.Slider(options, this));
 			}
 		});
