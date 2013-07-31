@@ -14,6 +14,12 @@
 			<div class="screen s2">screen 3</div>
 		</div>
 
+		<div id="screens2" class="screens">
+			<div class="screen s0">screen 1</div>
+			<div class="screen s1"><img src="http://placekitten.com/400/300"></div>
+			<div class="screen s2">screen 3</div>
+		</div>
+
 		<script src="../libs/jquery/jquery.js"></script>
 		<script src="../src/ryac-basic-slider.js"></script>
 
@@ -23,6 +29,13 @@
 				var slider = $('#screens').slider({
 					element: 'div', // each screen in this example is defined by a div tag, the element can be anything..
 					width: 400,
+					onSlideStart: onSlideStart
+				});
+
+				var slider = $('#screens2').slider({
+					element: 'div', // each screen in this example is defined by a div tag, the element can be anything..
+					width: 400,
+					dir: 'right',
 					onSlideStart: onSlideStart
 				});
 

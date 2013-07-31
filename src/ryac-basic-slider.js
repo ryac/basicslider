@@ -33,6 +33,7 @@
 		width: 500,
 		speed: 300,
 		interval: 2000,
+		dir: 'left',
 		// callbacks..
 		onSlideStart: function () { return false; },
 	};
@@ -57,6 +58,8 @@
 			// set current index of item..
 			this.current = 0;
 
+			this.dir = (this.options.dir === 'left') ? 1 : -1;
+
 			// if no items..
 			if (this.itemsCount === 0) {
 				logWarn('no items found..');
@@ -75,7 +78,7 @@
 
 		changeSlide: function (id) {
 			this.$items.eq(this.current).animate({
-				left: -this.itemWidth
+				left: -this.itemWidth * this.dir
 			}, this.options.speed, function () {
 				// $(this).hide();
 			});
@@ -86,7 +89,7 @@
 				this.current = 0;
 			}
 
-			this.$items.eq(this.current).show().css({ left: this.itemWidth });
+			this.$items.eq(this.current).show().css({ left: this.itemWidth * this.dir });
 
 			this.$items.eq(this.current).animate({ left: '0' }, this.options.speed);
 
